@@ -1,6 +1,6 @@
 # Assignment #5 - Dockerize a Recipe Sharing Application
 
-A full-stack recipe sharing application with React frontend and Node.js backend.
+A full-stack recipe sharing application with React frontend and Node.js backend. Also, used google cloud and github action.
 
 ## Your Assignment
 Your task is to containerize this application using Docker and Docker Compose. You'll need to create:
