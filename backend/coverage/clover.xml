@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1794058966305" clover="3.2.0">
-  <project timestamp="1794058966305" name="All files">
+<coverage generated="1794059495119" clover="3.2.0">
+  <project timestamp="1794059495119" name="All files">
     <metrics statements="37" coveredstatements="34" conditionals="18" coveredconditionals="17" methods="9" coveredmethods="8" elements="64" coveredelements="59" complexity="0" loc="37" ncloc="37" packages="1" files="1" classes="1"/>
     <file name="server.js" path="C:\Users\sb567250\OneDrive - Loras College\ML Claude\recipe-sharing-docker\backend\server.js">
       <metrics statements="37" coveredstatements="34" conditionals="18" coveredconditionals="17" methods="9" coveredmethods="8"/>
