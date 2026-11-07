@@ -29,7 +29,7 @@ describe('Recipe Sharing App - Utility Functions', () => {
             cookingTime: 30
         }
 
-        expect(validateRecipeData(validRecipe)).toBe(false)
+        expect(validateRecipeData(validRecipe)).toBe(true)
     })
 
     it('rejects invalid recipe data', () => {
