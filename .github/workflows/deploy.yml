@@ -61,16 +61,18 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           gcloud builds submit \
+            --no-source \
             --project="${{ secrets.GCP_PROJECT_ID }}" \
             --region="${{ secrets.GCP_REGION }}" \
             --config=cloudbuild-backend.yaml \
-            .
+            --substitutions=_COMMIT_SHA=${{ github.sha }}
 
       - name: Submit frontend build and deployment
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
           gcloud builds submit \
+            --no-source \
             --project="${{ secrets.GCP_PROJECT_ID }}" \
             --region="${{ secrets.GCP_REGION }}" \
             --config=cloudbuild-frontend.yaml \
-            .
+            --substitutions=_COMMIT_SHA=${{ github.sha }}

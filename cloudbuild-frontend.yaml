@@ -1,5 +1,11 @@
 
 steps:
+  - name: 'gcr.io/cloud-builders/git'
+    args: ['clone', 'https://github.com/SubratBhattarai/recipe-sharing-docker.git', '/workspace/source']
+
+  - name: 'gcr.io/cloud-builders/git'
+    args: ['-C', '/workspace/source', 'checkout', '--detach', '${_COMMIT_SHA}']
+
   # 1. Build the frontend Docker image
   - name: 'gcr.io/cloud-builders/docker'
     args:
@@ -8,7 +14,7 @@ steps:
       - 'VITE_API_URL=https://recipe-backend-74735219876.us-central1.run.app'
       - '-t'
       - 'gcr.io/$PROJECT_ID/recipe-frontend'
-      - './frontend'
+      - '/workspace/source/frontend'
 
   # 2. Push the image to Container Registry
   - name: 'gcr.io/cloud-builders/docker'
